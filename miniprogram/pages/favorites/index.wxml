@@ -1,0 +1,26 @@
+<view class="page-shell favorites-page">
+  <view class="section-heading favorites-heading">
+    <view>
+      <view class="section-title">喜欢的，先收好</view>
+      <view class="section-note">收藏 {{products.length}} 件日常好物</view>
+    </view>
+    <text class="heart-mark">♡</text>
+  </view>
+
+  <view class="product-grid" wx:if="{{products.length}}">
+    <product-card
+      wx:for="{{products}}"
+      wx:key="id"
+      product="{{item}}"
+      favorite="{{true}}"
+      bind:select="openProduct"
+      bind:togglefavorite="handleFavorite"
+    />
+  </view>
+  <view class="empty-state" wx:else>
+    <text class="empty-emoji">♡</text>
+    <text class="empty-title">还没有收藏好物</text>
+    <text class="empty-note">遇见喜欢的商品，点一下爱心收进来</text>
+    <view class="browse-button" bindtap="openCategory">去逛逛</view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="page-shell about-page">
+  <view class="about-hero">
+    <text class="about-mark">拾</text>
+    <text class="about-name">拾物好店</text>
+    <text class="about-slogan">认真挑选，让日常多一点喜欢</text>
+  </view>
+
+  <view class="about-card">
+    <text class="about-heading">关于我们</text>
+    <text class="about-copy">拾物好店相信，好的生活不一定复杂。一件顺手的器物、一束新鲜的花、一个安静的午后，都能让普通日子变得更可爱。</text>
+    <text class="about-copy">我们持续寻找实用、耐看、有温度的日常好物，希望陪你慢慢把生活过成喜欢的样子。</text>
+  </view>
+
+  <view class="contact-card" bindtap="contactUs">
+    <view>
+      <text class="contact-title">联系店铺</text>
+      <text class="contact-subtitle">工作日 9:00—18:00</text>
+    </view>
+    <view class="contact-number">{{phoneNumber || '联系方式待配置'}} <text>→</text></view>
+  </view>
+  <text class="about-footnote">商品信息为模板演示内容，可在 data/products.js 中替换</text>
+</view>

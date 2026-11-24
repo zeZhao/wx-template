@@ -1,0 +1,37 @@
+<view class="page-shell category-page">
+  <view class="category-header">
+    <view>
+      <view class="section-title">慢慢挑，好好选</view>
+      <view class="section-note">从喜欢的分类开始逛逛</view>
+    </view>
+    <view class="search-button" bindtap="openSearch">⌕</view>
+  </view>
+
+  <scroll-view class="category-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+    <view class="category-list">
+      <view
+        wx:for="{{categories}}"
+        wx:key="id"
+        class="category-chip {{activeCategory === item.id ? 'active' : ''}}"
+        data-id="{{item.id}}"
+        bindtap="selectCategory"
+      >{{item.name}}</view>
+    </view>
+  </scroll-view>
+
+  <view class="result-caption">共 {{products.length}} 件好物</view>
+  <view class="product-grid">
+    <product-card
+      wx:for="{{products}}"
+      wx:key="id"
+      product="{{item}}"
+      favorite="{{item.isFavorite}}"
+      bind:select="openProduct"
+      bind:togglefavorite="handleFavorite"
+    />
+  </view>
+  <view class="empty-state" wx:if="{{products.length === 0}}">
+    <text class="empty-emoji">🪴</text>
+    <text>这个分类还在挑选中</text>
+  </view>
+</view>

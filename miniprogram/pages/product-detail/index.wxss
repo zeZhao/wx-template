@@ -1,0 +1,145 @@
+.detail-page {
+  min-height: 100vh;
+  padding-bottom: 48rpx;
+}
+
+.detail-cover {
+  position: relative;
+  display: flex;
+  height: 650rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-emoji {
+  font-size: 220rpx;
+}
+
+.cover-category {
+  position: absolute;
+  right: 28rpx;
+  bottom: 28rpx;
+  padding: 12rpx 20rpx;
+  border-radius: 28rpx;
+  background: rgba(255, 255, 255, 0.82);
+  color: #1D2B45;
+  font-size: 22rpx;
+}
+
+.detail-content {
+  margin-top: -20rpx;
+  padding: 34rpx 36rpx 44rpx;
+  border-radius: 28rpx 28rpx 0 0;
+  background: #FFFFFF;
+}
+
+.detail-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detail-title-group {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.detail-name {
+  color: #1D2B45;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.detail-tagline {
+  margin-top: 12rpx;
+  color: #7A8798;
+  font-size: 24rpx;
+}
+
+.detail-favorite {
+  display: flex;
+  min-width: 90rpx;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20rpx;
+  color: #7A8798;
+  font-size: 38rpx;
+}
+
+.detail-favorite.is-favorite {
+  color: #356AE6;
+}
+
+.favorite-label {
+  margin-top: 4rpx;
+  font-size: 19rpx;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  margin-top: 28rpx;
+}
+
+.detail-price {
+  color: #356AE6;
+  font-size: 42rpx;
+  font-weight: 700;
+}
+
+.detail-original {
+  margin-left: 14rpx;
+  color: #9AA5B4;
+  font-size: 24rpx;
+  text-decoration: line-through;
+}
+
+.price-caption {
+  margin-left: auto;
+  color: #7A8798;
+  font-size: 21rpx;
+}
+
+.detail-divider {
+  height: 1rpx;
+  margin: 32rpx 0;
+  background: #EDF1F7;
+}
+
+.detail-section {
+  margin-bottom: 34rpx;
+}
+
+.detail-section-title {
+  display: block;
+  margin-bottom: 18rpx;
+  color: #1D2B45;
+  font-size: 29rpx;
+  font-weight: 700;
+}
+
+.detail-description {
+  color: #526176;
+  font-size: 25rpx;
+  line-height: 1.9;
+}
+
+.spec-row {
+  display: flex;
+  margin-top: 12rpx;
+  color: #526176;
+  font-size: 24rpx;
+}
+
+.spec-dot {
+  margin-right: 12rpx;
+  color: #356AE6;
+}
+
+.detail-footer-note {
+  margin-top: 48rpx;
+  color: #9AA5B4;
+  font-size: 21rpx;
+  text-align: center;
+}

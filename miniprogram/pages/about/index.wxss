@@ -1,0 +1,89 @@
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56rpx 0 48rpx;
+}
+
+.about-mark {
+  display: flex;
+  width: 128rpx;
+  height: 128rpx;
+  align-items: center;
+  justify-content: center;
+  border-radius: 38rpx;
+  background: #E6EEFF;
+  color: #356AE6;
+  font-size: 66rpx;
+  font-weight: 700;
+}
+
+.about-name {
+  margin-top: 24rpx;
+  color: #1D2B45;
+  font-size: 38rpx;
+  font-weight: 700;
+}
+
+.about-slogan {
+  margin-top: 12rpx;
+  color: #7A8798;
+  font-size: 23rpx;
+}
+
+.about-card,
+.contact-card {
+  margin-bottom: 22rpx;
+  padding: 30rpx;
+  border-radius: 20rpx;
+  background: #FFFFFF;
+}
+
+.about-heading,
+.contact-title {
+  display: block;
+  margin-bottom: 18rpx;
+  color: #1D2B45;
+  font-size: 29rpx;
+  font-weight: 700;
+}
+
+.about-copy {
+  display: block;
+  margin-top: 14rpx;
+  color: #526176;
+  font-size: 24rpx;
+  line-height: 1.9;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-title {
+  margin-bottom: 8rpx;
+}
+
+.contact-subtitle {
+  color: #7A8798;
+  font-size: 21rpx;
+}
+
+.contact-number {
+  color: #356AE6;
+  font-size: 22rpx;
+}
+
+.contact-number text {
+  margin-left: 8rpx;
+}
+
+.about-footnote {
+  display: block;
+  margin-top: 34rpx;
+  color: #9AA5B4;
+  font-size: 19rpx;
+  text-align: center;
+}

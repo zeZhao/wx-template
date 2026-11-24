@@ -1,0 +1,38 @@
+<view class="detail-page" wx:if="{{product}}">
+  <view class="detail-cover" style="background: {{product.color}}">
+    <text class="detail-emoji">{{product.emoji}}</text>
+    <text class="cover-category">{{product.categoryName}}</text>
+  </view>
+
+  <view class="detail-content">
+    <view class="detail-title-row">
+      <view class="detail-title-group">
+        <text class="detail-name">{{product.name}}</text>
+        <text class="detail-tagline">{{product.tagline}}</text>
+      </view>
+      <view class="detail-favorite {{favorite ? 'is-favorite' : ''}}" bindtap="toggleFavorite">
+        <text>{{favorite ? '♥' : '♡'}}</text>
+        <text class="favorite-label">{{favorite ? '已收藏' : '收藏'}}</text>
+      </view>
+    </view>
+
+    <view class="price-row">
+      <text class="detail-price">¥{{product.price}}</text>
+      <text class="detail-original" wx:if="{{product.originalPrice}}">¥{{product.originalPrice}}</text>
+      <text class="price-caption">精选好物</text>
+    </view>
+
+    <view class="detail-divider"></view>
+    <view class="detail-section">
+      <text class="detail-section-title">商品介绍</text>
+      <text class="detail-description">{{product.description}}</text>
+    </view>
+    <view class="detail-section">
+      <text class="detail-section-title">商品信息</text>
+      <view class="spec-row" wx:for="{{product.specs}}" wx:key="*this">
+        <text class="spec-dot">·</text><text>{{item}}</text>
+      </view>
+    </view>
+    <view class="detail-footer-note">好好生活，从一件喜欢的日常好物开始</view>
+  </view>
+</view>

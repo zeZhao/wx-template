@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/category/index",
+    "pages/favorites/index",
+    "pages/about/index",
+    "pages/search/index",
+    "pages/product-detail/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "拾物好店",
+    "navigationBarBackgroundColor": "#F5F7FA",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F5F7FA",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#7A8798",
+    "selectedColor": "#356AE6",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "发现",
+        "iconPath": "assets/tabbar/discover.png",
+        "selectedIconPath": "assets/tabbar/discover-active.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "assets/tabbar/category.png",
+        "selectedIconPath": "assets/tabbar/category-active.png"
+      },
+      {
+        "pagePath": "pages/favorites/index",
+        "text": "收藏",
+        "iconPath": "assets/tabbar/favorites.png",
+        "selectedIconPath": "assets/tabbar/favorites-active.png"
+      },
+      {
+        "pagePath": "pages/about/index",
+        "text": "我们",
+        "iconPath": "assets/tabbar/about.png",
+        "selectedIconPath": "assets/tabbar/about-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}

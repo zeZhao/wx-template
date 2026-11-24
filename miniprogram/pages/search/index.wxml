@@ -1,0 +1,36 @@
+<view class="page-shell search-page">
+  <view class="search-bar">
+    <text class="search-symbol">⌕</text>
+    <input
+      class="search-input"
+      value="{{keyword}}"
+      placeholder="搜商品名称、分类或灵感"
+      confirm-type="search"
+      focus="{{true}}"
+      bindinput="handleInput"
+      bindconfirm="handleConfirm"
+    />
+    <text wx:if="{{keyword}}" class="clear-button" bindtap="clearSearch">×</text>
+  </view>
+  <view class="search-summary" wx:if="{{keyword}}">找到 {{products.length}} 件相关好物</view>
+  <view class="section-heading" wx:else>
+    <view>
+      <view class="section-title">大家都喜欢</view>
+      <view class="section-note">从这些日常好物开始</view>
+    </view>
+  </view>
+  <view class="product-grid">
+    <product-card
+      wx:for="{{products}}"
+      wx:key="id"
+      product="{{item}}"
+      favorite="{{item.isFavorite}}"
+      bind:select="openProduct"
+      bind:togglefavorite="handleFavorite"
+    />
+  </view>
+  <view class="empty-state" wx:if="{{products.length === 0}}">
+    <text class="empty-emoji">🔎</text>
+    <text>没有找到相关商品，换个关键词试试吧</text>
+  </view>
+</view>

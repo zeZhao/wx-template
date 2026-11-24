@@ -1,0 +1,50 @@
+<view class="page-shell home-page">
+  <view class="topline">
+    <view>
+      <text class="eyebrow">GOOD THINGS, GOOD DAYS</text>
+      <view class="brand-title">拾物好店</view>
+    </view>
+    <view class="search-entry" bindtap="openSearch">
+      <text class="search-icon">⌕</text>
+      <text>找点喜欢的</text>
+    </view>
+  </view>
+
+  <view class="hero">
+    <view class="hero-copy">
+      <text class="hero-kicker">把日子过成喜欢的样子</text>
+      <text class="hero-title">认真挑选<br />日常好物</text>
+      <text class="hero-caption">简单、耐看，也经得起每天使用</text>
+      <view class="hero-link" bindtap="openCategory">逛逛精选 <text>→</text></view>
+    </view>
+    <view class="hero-art">
+      <text class="hero-art-emoji">🌿</text>
+      <view class="hero-art-stamp">SELECTED<br />WITH CARE</view>
+    </view>
+  </view>
+
+  <view class="value-row">
+    <view class="value-item"><text class="value-icon">✦</text><text>用心挑选</text></view>
+    <view class="value-item"><text class="value-icon">⌂</text><text>日常好用</text></view>
+    <view class="value-item"><text class="value-icon">♡</text><text>简单生活</text></view>
+  </view>
+
+  <view class="section-heading">
+    <view>
+      <view class="section-title">本周精选</view>
+      <view class="section-note">好物不必多，刚好喜欢就好</view>
+    </view>
+    <view class="more-link" bindtap="openCategory">全部商品 <text>→</text></view>
+  </view>
+
+  <view class="product-grid">
+    <product-card
+      wx:for="{{products}}"
+      wx:key="id"
+      product="{{item}}"
+      favorite="{{item.isFavorite}}"
+      bind:select="openProduct"
+      bind:togglefavorite="handleFavorite"
+    />
+  </view>
+</view>

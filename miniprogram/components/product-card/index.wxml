@@ -1,0 +1,15 @@
+<view class="product-card" bindtap="onSelect">
+  <view class="product-cover" style="background: {{product.color}}">
+    <text class="cover-emoji">{{product.emoji}}</text>
+    <view class="favorite-button {{favorite ? 'is-favorite' : ''}}" catchtap="onToggleFavorite">
+      {{favorite ? '♥' : '♡'}}
+    </view>
+  </view>
+  <view class="product-info">
+    <text class="product-name">{{product.name}}</text>
+    <view class="product-meta">
+      <text class="product-price">¥{{product.price}}</text>
+      <text class="product-original" wx:if="{{product.originalPrice}}">¥{{product.originalPrice}}</text>
+    </view>
+  </view>
+</view>
